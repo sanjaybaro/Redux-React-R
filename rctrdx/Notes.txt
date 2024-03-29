@@ -1,3 +1,6 @@
+# Store have:
+dispatch method, getState method, subscribe method
+
 1.what is react-Redux
 An official Redux binding only for react
 
@@ -11,7 +14,7 @@ c. useDispatch : useDispatch returns the store's dispatch method to let you disp
 
 
 
-* Provider : 
+(a) Provider : 
 A provider is a component that makes the redux store available to any nested
 Components
 
@@ -20,3 +23,25 @@ eg:
 <Provider store={store}>
     <App/>
 </Provider>
+
+- We can use the provider anywhere
+
+(b) useSelector :
+A hook that allows us to access the data from the ReduxStore.
+
+eg:
+
+store.getState()
+//{todos: [...],counter:7}
+
+const todos=useSelector((store)=>store.todos)
+
+
+(c) useDispatch : 
+It's a hook that returns the reference to the dispatch function from the Redux store
+
+eg:
+
+const dispatch=useDispatch();
+dispatch(actionObject)
+
