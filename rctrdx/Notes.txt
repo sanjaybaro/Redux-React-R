@@ -1,5 +1,22 @@
 1.what is react-Redux
-
 An official Redux binding only for react
 
+2. Redux-react core parts:
+a. Provider : 
+React Redux includes a <Provider /> component, which makes the Redux store available to the rest of your app
 
+b. useSelector : useSelector reads a value from the store state and subscribes to updates,
+
+c. useDispatch : useDispatch returns the store's dispatch method to let you dispatch actions.
+
+
+
+* Provider : 
+A provider is a component that makes the redux store available to any nested
+Components
+
+eg:
+
+<Provider store={store}>
+    <App/>
+</Provider>
