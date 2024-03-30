@@ -6,7 +6,6 @@ const initialState = {
   todo: [],
   isLoading: false,
   isError: false,
-  // errMessage:""
 };
 
 export const store = legacy_createStore(reducer, initialState);
