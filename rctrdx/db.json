@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": false
+    },
+    {
+      "title": "css",
+      "status": false,
+      "id": 2
+    },
+    {
+      "title": "css",
+      "status": false,
+      "id": 3
+    },
+    {
+      "title": "sss",
+      "status": false,
+      "id": 4
+    }
+  ]
+}

@@ -45,3 +45,5 @@ eg:
 const dispatch=useDispatch();
 dispatch(actionObject)
 
+3. whenever we are making get request server will give totally new array (i.e. state)
+

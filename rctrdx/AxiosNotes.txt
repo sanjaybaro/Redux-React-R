@@ -1,0 +1,27 @@
+1. post request in todo using async/await and try/catch
+
+```
+const addTodoHandler = async () => {
+  try {
+    const res = await axios.post("http://localhost:8080/todos", newTodo);
+    console.log(res.data);
+  } catch (err) {
+    console.error(err.message);
+  }
+};
+
+```
+2. Normal post using axios
+
+```
+const addTodoHandler = () => {
+    axios
+      .post("http://localhost:8080/todos", newTodo)
+      .then((res) => console.log(res.data))
+      .catch((err) => {
+        console.log(err.message);
+      });
+  };
+
+```
+

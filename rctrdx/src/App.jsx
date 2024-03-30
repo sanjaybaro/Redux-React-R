@@ -1,13 +1,14 @@
 import "./App.css";
 import Counter from "./Components/Counter";
-import TodoList from "./Components/TodoList";
+import Todo from "./Components/Todo";
+
 
 function App() {
   return (
     <>
     <h1>React Redux Revisit</h1>
-      {/* <TodoList /> */}
-      <Counter/>
+      {/* <Counter/> */}
+      <Todo/>
     </>
   );
 }
