@@ -47,3 +47,50 @@ dispatch(actionObject)
 
 3. whenever we are making get request server will give totally new array (i.e. state)
 
+Note:- json-server --watch db.json --port 8080
+
+4.whenever you cahnge a state it will have to return a totally new state.
+
+5. what you subscribe from store it will only that particular thing
+
+# shallow equal
+6. The way you are subscribing it will also compare in the same manner
+
+eg:
+
+const {todo,isLoading}=useSelector((store)=>({
+    todo:stor.todo,
+    isLoading:stor.isLoading
+}))
+
+possess Re-rendered
+
+* logic behind this: --> Comparision
+
+In case of Counter it will compare like this below:
+ 
+store=>store.counter
+
+counter(1)===counter(2)
+
+firstState===SecondState
+
+if it changes it possess re-rendered
+
+In case of Todos:
+
+How are we subscribing --
+ store=>{object}
+
+ No matter in the object something change or not whenever you compare
+ {}==={}
+ it will return false and whenever its give false the component will re-rendered
+ 
+ currently its comparing the whole object:
+ {isLoading,todo} === {isLoading,todo} //false
+
+with SHALLOWEQUAL --
+it will go one step inside
+
+isLoading===isLoading
+No if isLoading changes it will return false

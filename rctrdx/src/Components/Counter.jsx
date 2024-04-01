@@ -8,6 +8,8 @@ function Counter() {
 
   const dispatch = useDispatch();
 
+  console.log("Counter Re-rendered");
+
   const handleAdd = () => {
     dispatch(addAction(2));
   };

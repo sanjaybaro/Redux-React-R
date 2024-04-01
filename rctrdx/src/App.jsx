@@ -7,7 +7,9 @@ function App() {
   return (
     <>
     <h1>React Redux Revisit</h1>
-      {/* <Counter/> */}
+      <Counter/>
+      <br/>
+      <hr/>
       <Todo/>
     </>
   );

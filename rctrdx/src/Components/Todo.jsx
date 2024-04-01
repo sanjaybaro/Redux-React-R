@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import {
   getTodoFailureAction,
   getTodoRequestAction,
@@ -10,9 +10,16 @@ import {
 import TodoInput from "./TodoInput";
 
 function Todo() {
-  const todo = useSelector((store) => store.todo);
+  const { isLoading, todo } = useSelector(
+    (store) => ({
+      isLoading: store.isLoading,
+      todo: store.todo,
+    }),
+    shallowEqual
+  );
 
   const dispatch = useDispatch();
+  console.log("Todo Re-rendered");
 
   console.log(todo);
 
@@ -41,6 +48,7 @@ function Todo() {
   return (
     <div>
       <TodoInput />
+      {isLoading && <h1>Loading....</h1>}
       {todo.length &&
         todo.map((el) => (
           <div key={el.id}>

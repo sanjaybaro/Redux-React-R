@@ -2,38 +2,18 @@
   "todos": [
     {
       "id": 1,
-      "title": "json-server",
+      "title": "Task-1",
       "author": false
     },
     {
-      "title": "css",
+      "title": "Task-2",
       "status": false,
       "id": 2
     },
     {
-      "title": "css",
+      "title": "Task-3",
       "status": false,
       "id": 3
-    },
-    {
-      "title": "sss",
-      "status": false,
-      "id": 4
-    },
-    {
-      "title": "dsa",
-      "status": false,
-      "id": 5
-    },
-    {
-      "title": "JKL",
-      "status": false,
-      "id": 6
-    },
-    {
-      "title": "k",
-      "status": false,
-      "id": 7
     }
   ]
 }
