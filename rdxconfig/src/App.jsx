@@ -6,7 +6,7 @@ import Todo from "./Components/Todo";
 function App() {
   return (
     <>
-    <h1>React Redux Revisit</h1>
+    <h1>React Redux Configuration</h1>
       <Counter/>
       <br/>
       <hr/>
