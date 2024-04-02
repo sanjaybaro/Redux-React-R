@@ -1,1 +1,45 @@
-REDUX CONFIGUARTION
+REDUX CONFIGUARTION 
+
+# learning scalling of application with proper structure
+
+
+1. default state param to initialState
+
+Default param
+
+state=initialState
+
+it will not break teh app if something happen to state
+here initialState is contain all the state of other compnent
+as well if something breaks in the single Components it
+will break the whole application
+So, the hack is to come out from this is to
+state=initialState.
+
+2. Combine reducer
+
+import of reducer from different folder example below:
+
+```
+import {reducer as counterReducer} from "./counter/reducer"
+import {reducer as todoReducer} from "./Todo/reducer"
+
+```
+const rootReducer = combineReducers({
+  counterReducer,
+  todoReducer,
+});
+
+3. How to access the state from combineReducers:
+
+```
+ const count = useSelector((state) => {
+    console.log(state);
+    return state.counterReducer.counter;
+  });
+```
+
+4. Making Authentication and Private Route
+
+
+

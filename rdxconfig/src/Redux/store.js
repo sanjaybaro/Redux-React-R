@@ -1,11 +1,10 @@
-import { legacy_createStore } from "redux";
-import { reducer } from "./reducer";
+import { combineReducers, legacy_createStore } from "redux";
+import { reducer as counterReducer } from "./counter/reducer";
+import { reducer as todoReducer } from "./Todo/reducer";
 
-const initialState = {
-  counter: 0,
-  todo: [],
-  isLoading: false,
-  isError: false,
-};
+const rootReducer = combineReducers({
+  counterReducer,
+  todoReducer,
+});
 
-export const store = legacy_createStore(reducer, initialState);
+export const store = legacy_createStore(rootReducer);

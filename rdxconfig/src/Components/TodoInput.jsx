@@ -6,7 +6,7 @@ import {
   postTodoFailureAction,
   postTodoRequestAction,
   postTodoSuccessAction,
-} from "../Redux/action";
+} from "../Redux/Todo/action";
 
 function TodoInput() {
   const [title, setTitle] = useState("");
@@ -20,7 +20,7 @@ function TodoInput() {
     dispatch(postTodoRequestAction());
     try {
       const res = await axios.post("http://localhost:8080/todos", newTodo);
-      console.log(res.data);
+      // console.log(res.data);
       dispatch(postTodoSuccessAction(res.data));
     } catch (err) {
       console.error(err.message);

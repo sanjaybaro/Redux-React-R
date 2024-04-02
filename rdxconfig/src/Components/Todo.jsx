@@ -6,22 +6,22 @@ import {
   getTodoFailureAction,
   getTodoRequestAction,
   getTodoSuccessAction,
-} from "../Redux/action";
+} from "../Redux/Todo/action";
 import TodoInput from "./TodoInput";
 
 function Todo() {
   const { isLoading, todo } = useSelector(
     (store) => ({
-      isLoading: store.isLoading,
-      todo: store.todo,
+      isLoading: store.todoReducer.isLoading,
+      todo: store.todoReducer.todo,
     }),
     shallowEqual
   );
 
   const dispatch = useDispatch();
-  console.log("Todo Re-rendered");
+  // console.log("Todo Re-rendered");
 
-  console.log(todo);
+  // console.log(todo);
 
   const getTodos = () => {
     //Request

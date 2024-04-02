@@ -1,6 +1,3 @@
-export const ADD = "ADD";
-export const REDUCE = "REDUCE";
-
 // get Todo
 
 export const TODO_REQUEST = "TODO_REQUEST";

@@ -1,26 +1,18 @@
 import {
-  ADD,
   GET_TODO_SUCCESS,
   POST_TODO_SUCCESS,
-  REDUCE,
   TODO_FAILURE,
   TODO_REQUEST,
 } from "./actionTypes";
 
-export const reducer = (state, { type, payload }) => {
+const initialState = {
+  todo: [],
+  isLoading: false,
+  isError: false,
+};
+
+export const reducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case ADD: {
-      return {
-        ...state,
-        counter: state.counter + payload,
-      };
-    }
-    case REDUCE: {
-      return {
-        ...state,
-        counter: state.counter - payload,
-      };
-    }
     case TODO_REQUEST: {
       return {
         ...state,

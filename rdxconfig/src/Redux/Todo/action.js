@@ -1,19 +1,9 @@
 import {
-  ADD,
   GET_TODO_SUCCESS,
   POST_TODO_SUCCESS,
-  REDUCE,
   TODO_FAILURE,
   TODO_REQUEST,
 } from "./actionTypes";
-
-export const addAction = (payload) => {
-  return { type: ADD, payload };
-};
-
-export const reduceAction = (payload) => {
-  return { type: REDUCE, payload };
-};
 
 //TODO
 

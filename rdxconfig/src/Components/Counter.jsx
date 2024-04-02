@@ -1,14 +1,17 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addAction, reduceAction } from "../Redux/action";
-import { store } from "../Redux/store";
+import { addAction, reduceAction } from "../Redux/counter/action";
 
 function Counter() {
-  const count = useSelector((state) => state.counter);
+  const count = useSelector(
+    (state) =>
+      // console.log(state);
+      state.counterReducer.counter
+  );
+
+  // console.log("Counter Re-rendered");
 
   const dispatch = useDispatch();
-
-  console.log("Counter Re-rendered");
 
   const handleAdd = () => {
     dispatch(addAction(2));
