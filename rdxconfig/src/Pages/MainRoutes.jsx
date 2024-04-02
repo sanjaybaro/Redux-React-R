@@ -2,11 +2,13 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Counter from "../Components/Counter";
 import Todo from "../Components/Todo";
+import Home from "./Home";
 import Login from "./Login";
 
 function MainRoutes() {
   return (
     <Routes>
+      <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
       <Route path="/counter" element={<Counter />} />
       <Route path="/todo" element={<Todo />} />

@@ -1,0 +1,35 @@
+# with try/cacth and async/await
+```
+ const handleSubmit = async () => {
+    let userInfo = {
+      email,
+      password,
+    };
+    try {
+      const response = await axios.post(
+        "https://reqres.in/api/login",
+        userInfo
+      );
+      console.log(response.data);
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
+```
+# same try/catch and async/await 
+```
+const handleSubmit = async () => {
+    try {
+      let userInfo = {
+        email,
+        password,
+      };
+      // console.log(userInfo);
+      const res = await axios.post("https://reqres.in/api/login", userInfo);
+      console.log(res.data);
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+```
