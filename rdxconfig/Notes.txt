@@ -44,3 +44,19 @@ const rootReducer = combineReducers({
 -private route with redux (making store use authreducer use along with Navigate)
 
 
+5. Discussing about issue bug related to action type
+
+UI(ADD)---> 1. Todo
+            2. Counter
+            3. Login
+            4. Home
+when ui trigger with add button it will trigger
+the action with type : ADD and it will go to
+every action in search , if this happen all
+will cause a big problem , related to rendering
+issue and if the type:ADD is use in somwhere
+also it will give use some error . to avoid this
+
+solution- Common actionType
+place action Type in only one place
+

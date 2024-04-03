@@ -31,6 +31,7 @@ function Login() {
         console.log(err.message);
         dispatch(loginFailureAction());
       });
+      alert("Login Successfull..")
   };
 
   return (
