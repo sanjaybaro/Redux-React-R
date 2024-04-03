@@ -60,3 +60,13 @@ also it will give use some error . to avoid this
 solution- Common actionType
 place action Type in only one place
 
+6. Middleware Intro:
+
+structure
+```
+const logger=(a)=>(b)=>(c)=>{
+
+}
+
+export const store=legacy_createStore(rootReducer,applyMiddleware(logger)) 
+
