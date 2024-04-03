@@ -65,8 +65,17 @@ place action Type in only one place
 structure
 ```
 const logger=(a)=>(b)=>(c)=>{
+  console.log("a: ",a);//a is store (getState,dispatch)
+  //b is dispatch function that is taking some action
+  //c is action object (user actioon that is triggererd)
 
 }
 
+const logger=(store)=>(dispatch)=>(action)=>{
+  
+}
+
 export const store=legacy_createStore(rootReducer,applyMiddleware(logger)) 
+
+```
 
