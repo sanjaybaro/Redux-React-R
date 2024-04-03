@@ -1,11 +1,18 @@
 import axios from "axios";
 import React from "react";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import {
+  loginFailureAction,
+  loginRequestAction,
+  loginSuccessAction,
+} from "../Redux/Authentication/action";
 
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const dispatch = useDispatch();
   const handleSubmit = () => {
     let userInfo = {
       email,
@@ -13,13 +20,16 @@ function Login() {
     };
 
     // console.log(userInfo);
+    dispatch(loginRequestAction());
     axios
       .post("https://reqres.in/api/login", userInfo)
       .then((res) => {
-        console.log(res.data);
+        console.log(res.data.token);
+        dispatch(loginSuccessAction(res.data.token));
       })
       .catch((err) => {
         console.log(err.message);
+        dispatch(loginFailureAction());
       });
   };
 

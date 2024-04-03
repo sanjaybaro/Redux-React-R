@@ -40,6 +40,7 @@ const rootReducer = combineReducers({
 ```
 
 4. Making Authentication and Private Route
-
+-auth with redux (reqres api)
+-private route with redux (making store use authreducer use along with Navigate)
 
 
