@@ -1,2 +1,44 @@
 Redux Thunk
 
+1. Making Todo
+
+post + patch
+
+2. sepration of concern -
+
+UI  +  logic
+
+3. passsing dispatch as a prop in exporting 
+getTodo function.
+
+4. we dispatch an action :
+
+  useEffect(() => {
+    getTodos(dispatch);
+  }, []);
+
+But for above case we are dispatched the dispatch.
+dispatch is being dispatched.
+
+//we want to use 
+
+UI -- dispatch(getTodos)
+
+Middleware -- getTodos(dispatch)
+
+Redux--getTodos(getTodos)
+
+5. function currying
+
+6. Thunk
+- example of thunk from scratch below:
+const myMiddleware = (store) => (dispatch) => (action) => {
+  // console.log("Dispatch :", dispatch);
+  // console.log("Action  :", action);
+
+  if (typeof action === "function") {
+    return action(dispatch); //redux
+  }
+  return dispatch(action);
+};
+

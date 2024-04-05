@@ -1,4 +1,3 @@
-import axios from "axios";
 import React from "react";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,19 +9,22 @@ function Todo() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    getTodos();
+    // getTodos(dispatch);
+    dispatch(getTodos); //ui
   }, []);
 
   return (
     <div>
       <TodoInput />
       {/* {isLoading && <h1>Loading....</h1>} */}
-      {todo.length &&
-        todo.map((el) => (
-          <div key={el.id}>
-            {el.title} -- {el.status ? "True" : "False"}
-          </div>
-        ))}
+      {todo.length > 0 &&
+        todo.map((el) => {
+          return (
+            <div key={el.id}>
+              {el.title} -- {el.status ? "True" : "False"}
+            </div>
+          );
+        })}
     </div>
   );
 }

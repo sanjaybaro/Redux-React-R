@@ -1,23 +1,20 @@
 import React from "react";
 import { useState } from "react";
-import axios from "axios";
 import { useDispatch } from "react-redux";
-import {
-  failureAction,
-  postSuccessAction,
-  requestAction,
-} from "../Redux/Todo/action";
+import { postTodo } from "../Redux/Todo/action";
 
 function TodoInput() {
   const [title, setTitle] = useState("");
   const dispatch = useDispatch();
 
   const addTodoHandler = () => {
-    let newTodo = {
+    const newTodo = {
       title,
       status: false,
     };
-   
+
+    // postTodo(newTodo, dispatch);
+    dispatch(postTodo(newTodo))
   };
 
   return (

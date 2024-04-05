@@ -1,3 +1,4 @@
+import axios from "axios";
 import {
   GET_TODO_SUCCESS,
   PATCH_TODO_SUCCESS,
@@ -28,7 +29,7 @@ export const patchSuccessAction = () => {
 
 //logic
 
-export const getTodos = () => {
+export const getTodos = (dispatch) => {
   //Request
   dispatch(requestAction());
   axios
@@ -46,7 +47,7 @@ export const getTodos = () => {
     });
 };
 
-export const postTodo = () => {
+export const postTodo = (newTodo) => (dispatch) => {
   dispatch(requestAction());
   try {
     const res = axios.post("http://localhost:8080/todos", newTodo);
