@@ -1,0 +1,34 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "Task-1",
+      "author": false
+    },
+    {
+      "title": "Task-2",
+      "status": false,
+      "id": 2
+    },
+    {
+      "title": "Task-3",
+      "status": false,
+      "id": 3
+    },
+    {
+      "title": "Task-4",
+      "status": false,
+      "id": 4
+    },
+    {
+      "title": "A",
+      "status": false,
+      "id": 5
+    },
+    {
+      "title": "B",
+      "status": false,
+      "id": 6
+    }
+  ]
+}

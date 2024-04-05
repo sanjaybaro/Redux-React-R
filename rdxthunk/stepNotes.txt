@@ -1,0 +1,12 @@
+1. Install
+ -Redux
+ -react-Redux
+ -axios
+ -json-server
+
+ *making component folder
+
+2. Setup Redux
+ -Redux folder
+  -store.js
+   
